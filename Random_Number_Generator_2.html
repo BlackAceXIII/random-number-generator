@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Comment in HTML -->
+        <title>Attmept #2 on a random number generator</title> <!-- This is what appears when you hover the tab in the browser -->
+        <style>
+            /* Comment in CSS */
+            body{
+                min-height:100vh;
+                transition: 0.5s;
+                display: flex;
+                background-color: #A4E5E0;
+                align-items: center;
+                justify-content: center;
+            }
+            .button {
+                background-color: #4CAF50; /* Green */
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+            div {
+                border: 2px solid;
+                padding: 20px; 
+                width: 300px;
+                resize: both;
+                overflow: auto;
+                /*Resizable Box for no real purpose*/
+            }
+            input {
+                background-color: #c57272; /* Pale Red */
+                font-style: italic;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: #ffffff; /* White */
+                border: 1px solid;
+                padding: 20px; 
+                width: 300px;
+                resize: both;
+                overflow: auto;
+                /*Resizable Box for no real purpose*/
+            }
+        </style> <!-- This is where CSS can be linked or typed -->
+    </head>
+    <body>
+        <h1>The resize Property</h1>
+        <div>
+            <p>Let the user resize only the width of this div element.</p>
+            <p>To resize: Click and drag the bottom right corner of this div element.</p>
+            <!-- This is just to see resizable boxes in practice -->
+        </div>
+        
+        <button class="button" type="button" onclick="Random();">Random Number!</button>
+        <!-- buttons need the class to be modifiable by CSS -->
+        <input type="text" id="tb" name="tb" />
+        <script>
+            //Comment in javascript
+            
+            function Random() {
+                var rnd = Math.floor(Math.random() * 10);
+                document.getElementById('tb').value = rnd;
+            }
+        </script>
+    </body>
+</html>
